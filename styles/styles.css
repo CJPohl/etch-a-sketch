@@ -1,0 +1,15 @@
+.container {
+    display: grid;  /* change to flex box for adaptability*/
+    width: 100%;
+    height: 300px;
+    grid-template-columns: minmax(repeat(4, 1fr), auto);
+    grid-template-rows: minmax(repeat(4, 1fr), auto);
+    
+}
+
+
+
+.item {
+    border-color: black;
+    border-style: solid;
+}
