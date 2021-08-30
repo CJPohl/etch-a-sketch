@@ -2,11 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap" rel="stylesheet">   
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
-    <div class='container'></div>
+    <header class='header'>
+        <h1 class='title'>Etch-a-Sketch</h1>
+        <div class='advice'>Use your mouse to draw!</div>
+    </header>
+    <main class='main'>
+        <div class='settings'>
+           <input id='pickColor' type='color' value="#333333">
+           <i class="fas fa-arrow-up"></i>
+           <button id='color'>Custom Color</buttton>
+           <button id='rainbow'>Rainbow</button>
+           <button id='clear'>Clear All</button> 
+           <div id='pick-size' class='pick-size'>16 x 16</div>
+           <input id='slider' type='range' value='16' min='1' max='64'>
+        </div>
+        <div class='container'></div>
+    </main>
+    <footer class='footer'>
+        <p>Copyright @ 2021 Christopher J. Pohl</p>
+        <a href='https://github.com/CJPohl' target='_blank'>
+            <i class='fab fa-github'></i>
+        </a>
+    </footer>   
 </body>
 </html>

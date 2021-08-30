@@ -1,0 +1,10 @@
+for 16 times
+    create div element
+    assign proper style class
+    append to container class
+
+divs = all the divs
+for each div addeventlistener hover and perform function
+
+function change color
+    add style class to div
