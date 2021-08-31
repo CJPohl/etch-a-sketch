@@ -30,7 +30,6 @@ button, input {
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
-    
 }
 
 .header {
@@ -61,7 +60,6 @@ h1 {
 }
 
 .fa-arrow-up {
-    
     animation-duration: 2s;
     animation-name: up-down;
     animation-iteration-count: infinite;
