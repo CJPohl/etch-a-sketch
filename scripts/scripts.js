@@ -1,3 +1,5 @@
+// CREATE BUTTON FUNCTIONS TO CHANGE ACTIVATION STATES!
+
 // default settings
 const DEFAULT_MODE = 'customColor';
 const DEFAULT_SIZE = 16;
@@ -13,24 +15,28 @@ const rainbowColor = document.getElementById('rainbow');
 const clearButton = document.getElementById('clear');
 const pickSize = document.getElementById('pick-size');
 const sizeSlider = document.getElementById('slider');
-const container = document.querySelector('.container'); // main container
-
+const container = document.querySelector('.container'); // main grid container
 
 function changeMode(newMode) { // function to change color mode
     currentMode = newMode;
 }
 
-function toColorMode(e) { // listener for custom color button
+function changeColor(newColor) { // function to change color
+    currentColor = newColor;
+}
+
+function toColorMode() { // listener for custom color button
     this.classList.add('active');
     rainbowColor.classList.remove('active');
     changeMode('customColor');
 }
 
-function pickedColor(e) {
-
+function pickAColor() {
+    let pickedColor = pickColor.value;
+    changeColor(pickedColor);
 }
 
-function toRainbowMode(e) { // listener for rainbow button
+function toRainbowMode() { // listener for rainbow button
     this.classList.add('active');
     customColor.classList.remove('active');
     changeMode('rainbowColor');
@@ -44,7 +50,7 @@ function createGrid () { // function to create dom grid
     }
 }
 
-function clearGrid (e) { // listener for clear grid button
+function clearGrid () { // listener for clear grid button
     container.innerHTML = '';
     createGrid();
 }
@@ -63,5 +69,7 @@ function updateColor (e) { // function to color grid black when mouse hovers
 customColor.addEventListener('click', toColorMode);
 rainbowColor.addEventListener('click', toRainbowMode);
 clearButton.addEventListener('click', clearGrid);
+pickColor.addEventListener('input', pickAColor);
 
+window.addEventListener('load', toColorMode);
 window.addEventListener('load', createGrid);
